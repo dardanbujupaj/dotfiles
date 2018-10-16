@@ -12,7 +12,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export NVM_DIR="$HOME/.nvm"
+# load nvm
+# only if .nvm folder exists
+[ -s "$HOME/.nvm" ] && export NVM_DIR="$HOME/.nvm"
+# --no-use to disable initial loading of npm and node
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 

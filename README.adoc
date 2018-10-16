@@ -1,0 +1,13 @@
+= dotfiles
+Dardan Bujupaj, 16.10.2018
+
+== Notes
+
+=== nvm
+nvm is loaded by .zshrc.
+If the .nvm folder does not exist in the $HOME directory, nvm will not be loaded.
+Install nvm with:
+ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install | bash
+check https://github.com/creationix/nvm for the latest version.
+
+

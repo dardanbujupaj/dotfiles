@@ -3,8 +3,8 @@ Dardan Bujupaj, 16.10.2018
 
 == TODO
 
-* [ ] install-script
-* [ ] links to used tools
+[ ] install-script
+[ ] links to used tools
 
 == Installation
 To install a dotfile create a symlink at its expected location to the actual file in the repository.

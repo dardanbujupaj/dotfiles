@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'leafgarland/typescript-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -32,9 +33,18 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 set hidden
 set number
+set hlsearch
+set ignorecase
+set incsearch
+
+set laststatus=2
+set wildmenu
 
 syntax on
 

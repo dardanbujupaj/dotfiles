@@ -15,6 +15,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'junegunn/fzf'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,3 +53,13 @@ syntax on
 " depends on solarized terminalcolors, see .zshrc
 colorscheme solarized
 set background=dark
+
+let mapleader = " "
+" buffermanagement
+map <Leader>n :bn<cr>
+map <Leader>p :bp<cr>
+map <Leader>l :ls<cr>
+
+map <Leader>t :NERDTreeToggle<cr>
+map <Leader>f :FZF<cr>
+map <Leader>i :call fzf#run({'sink': 'read ! echo '})<cr>

@@ -7,10 +7,15 @@ Dardan Bujupaj, 16.10.2018
 * [ ] links to used tools
 
 == Installation
+=== Symlinks
 To install a dotfile create a symlink at its expected location to the actual file in the repository.
 
- cd dotfiles
- ln -s .zshrc ~/.zshrc
+ ln -s ~/.dotfiles/.zshrc ~/.zshrc
+
+INFO: Some dotfiles require a bash command to be executed.
+To execute the current line in vim use
+
+ :.w ! bash
 
 == Notes
 === .zshrc
@@ -19,7 +24,7 @@ nvm is loaded by .zshrc.
 If the .nvm folder does not exist in the $HOME directory, nvm will not be loaded.
 Install nvm with:
 
- curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install | bash
+ curl -o- "https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh" | sh
 
 Check https://github.com/creationix/nvm for the latest version.
 
@@ -28,3 +33,14 @@ Check https://github.com/creationix/nvm for the latest version.
 vim plugins are installed via Vundle. To use the .vimrc-dotfile, install Vundle like this:
 
  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+=== sway
+Install sway config to 
+
+ ~/.config/sway/config
+
+=== .Xdefaults
+The colors in .Xdefaults are configured using c defines in .Xdefaults.raw
+To preprocess the defines use
+
+ cpp -E .Xdefaults.raw -o .Xdefaults

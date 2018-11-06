@@ -47,3 +47,7 @@ if [ "$TERM" = "linux" ]; then
     echo -en "\e]PD6c71c4" # S_violet
     clear # against bg artifacts
 fi
+
+
+alias sway="export XKB_DEFAULT_LAYOUT=ch; export XKB_DEFAULT_VARIANT=de; sway"
+alias ls="ls --color=always"

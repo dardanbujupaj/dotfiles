@@ -51,3 +51,6 @@ fi
 
 alias sway="export XKB_DEFAULT_LAYOUT=ch; export XKB_DEFAULT_VARIANT=de; sway"
 alias ls="ls --color=always"
+source ~/.github_token.sh
+alias gh="curl -s \"https://api.github.com/user/issues?access_token=$GITHUB_TOKEN\" | jq -r '.[] | \"\(.repository.name): #\(.number) - \(.title)\"' | fzf | awk -F ': ' '{ print \$2 }'"
+

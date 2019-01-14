@@ -16,6 +16,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'junegunn/fzf'
+" Plugin 'klen/python-mode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,12 +55,30 @@ syntax on
 colorscheme solarized
 set background=dark
 
+" escape when typing jj in insert mode
+imap jj <Esc>
+
 let mapleader = " "
 " buffermanagement
 map <Leader>n :bn<cr>
 map <Leader>p :bp<cr>
 map <Leader>l :ls<cr>
 
+" map <Leader>r :call RunFile(expand('%'))<cr>
 map <Leader>t :NERDTreeToggle<cr>
+" open fzf filechooser
 map <Leader>f :FZF<cr>
+" run fzf and insert result
 map <Leader>i :call fzf#run({'sink': 'read ! echo '})<cr>
+
+
+" run current buffer as python. experimental
+"function RunFile(filename)
+"    " call writefile(['running '. a:filename], 'dummy', 'a')
+"    let job = job_start('python '. a:filename, {'out_io': 'buffer', 'out_name': 'dummy'})
+"
+"    if bufwinnr('dummy') == -1
+"        sbuf dummy
+"    endif
+"
+"endfunction

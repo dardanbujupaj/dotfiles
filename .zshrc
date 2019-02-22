@@ -19,6 +19,7 @@ compinit
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+#rubygems
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 
 

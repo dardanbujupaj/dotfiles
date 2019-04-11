@@ -17,6 +17,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'junegunn/fzf'
 " Plugin 'klen/python-mode'
+Plugin 'jalvesaq/nvim-r'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

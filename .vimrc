@@ -18,6 +18,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'junegunn/fzf'
 " Plugin 'klen/python-mode'
 Plugin 'fatih/vim-go'
+Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

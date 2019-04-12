@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+et nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -17,6 +17,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'junegunn/fzf'
 " Plugin 'klen/python-mode'
+Plugin 'jalvesaq/nvim-r'
 Plugin 'fatih/vim-go'
 Plugin 'lervag/vimtex'
 

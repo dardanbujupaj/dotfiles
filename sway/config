@@ -201,5 +201,11 @@ bar {
 
 default_border pixel 1
 
+# Audio controls
+bindsym XF86AudioRaiseVolume exec amixer set master 5%+
+bindsym XF86AudioLowerVolume exec amixer set master 5%-
+bindsym XF86AudioMute exec amixer sset Master toggle
+
+
 
 include /etc/sway/config.d/*

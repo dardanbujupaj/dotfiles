@@ -29,10 +29,16 @@ Install nvm with:
 Check https://github.com/creationix/nvm for the latest version.
 
 
-=== .vimrc
+=== vim
+==== .vimrc
 vim plugins are installed via Vundle. To use the .vimrc-dotfile, install Vundle like this:
 
  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+==== asciidoc.vim
+Filetype definitions for asciidoctor. Helps with filenames for `gf`.
+
+ ln -s ~/.dotfiles/asciidoc.vim ~/.vim/ftplugin
 
 === sway
 Install sway config to 

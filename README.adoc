@@ -45,6 +45,10 @@ Install sway config to
 
  ~/.config/sway/config
 
+* Following packages are used to handle the fn-keys input
+** alsamixer (lower/raise/mute audio)
+** light (modify display brightness)
+
 === .Xdefaults
 The colors in .Xdefaults are configured using c defines in .Xdefaults.raw
 To preprocess the defines use

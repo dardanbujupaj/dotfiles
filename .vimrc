@@ -72,6 +72,10 @@ map <Leader>l :ls<cr>
 map <Leader>t :NERDTreeToggle<cr>
 " open fzf filechooser
 map <Leader>f :FZF<cr>
+
+" open Ag/fzf filechooser
+map <Leader>a :Ag<cr>
+
 " run fzf and insert result
 map <Leader>i :call fzf#run({'sink': 'read ! echo '})<cr>
 

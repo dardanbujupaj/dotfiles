@@ -21,7 +21,10 @@ set $menu dmenu_run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output eDP-1 bg "$(find ~/media/wallpapers -type f | shuf | head -n1)" stretch
+output DP-4 bg "$(find ~/media/wallpapers -type f | shuf | head -n1)" stretch
+# output DP-4 bg ~/media/wallpapers/arch_solarized.png stretch
     #
 # Example configuration:
 #
@@ -205,9 +208,21 @@ default_border pixel 1
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 bindsym XF86AudioMute exec amixer sset Master toggle
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+
+# Display brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+# switch arrangement
+bindsym $mod+n output eDP-1 pos 0 0; output DP-4 pos 1920 0
+bindsym $mod+m output DP-4 pos 0 0; output eDP-1 pos 2560 0
+
+# Screenshots using grim
+# slurp defines the rectangle to screenshot
+bindsym --release Print exec grim -g "$(slurp)" - > /tmp/screenshot_$(date +%Y%m%d%H%M%S).png
 
 
+# start nextcloud client
+exec nextcloud
 
 include /etc/sway/config.d/*

@@ -56,3 +56,4 @@ alias ls="ls --color=always"
 source ~/.github_token.sh
 alias gh="curl -s \"https://api.github.com/user/issues?access_token=$GITHUB_TOKEN\" | jq -r '.[] | \"\(.repository.name): #\(.number) - \(.title)\"' | fzf | awk -F ': ' '{ print \$2 }'"
 
+alias activate="source venv/bin/activate"
